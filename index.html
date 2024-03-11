@@ -6,15 +6,18 @@
     <title>Yet Another Project</title>
     <script defer src="https://cdn.jsdelivr.net/gh/hankhank10/alpine-fetch@main/alpine-fetch.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="/screen.css">
     <link href="/dist/output.css" rel="stylesheet">
 </head>
 <body>
     <div x-data="{hello_world: $fetchjson('https://dummyjson.com/products/1', jsonItem='thumbnail'),
-                  title: $fetchjson('https://dummyjson.com/products/1', jsonItem='title')}">
-        <img alt="test" x-bind:src="hello_world"/>
-        <h1 x-text="title"></h1>
-        <button x-text="title" class="bg-black text-white p-2 rounded">Click me</button>
+                  title: $fetchjson('https://dummyjson.com/products/1', jsonItem='title'),
+                price: $fetchjson('https://dummyjson.com/products/1', jsonItem='price')}">
+        <h1 x-text="title" class="bg-container-lighter text-red-500"></h1>
+        <img alt="test" x-bind:src="hello_world" class="rounded"/>
+        
     </div>
+    
   
 </body>
 </html>

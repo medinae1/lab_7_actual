@@ -561,3 +561,6 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.rounded-custom {
+  border-radius: 0.25rem; /* You can adjust the radius as needed */
+}
